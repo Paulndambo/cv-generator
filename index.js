@@ -1,4 +1,8 @@
+alert("You Just Need To Provide Some Details And The You Will Get You Cv Ready. Welcome");
 //personal details recording
+var personalDetailsTitle = "Personal Details";
+document.getElementById('personal-details').innerHTML = "Personal Details";
+
 const personalDetails = (fname, lname, phone, email, maritalStatus, address, town, religion) => {
     fname = prompt("Type Your First Name Please: ");
     lname = prompt("Type Your Last Name Please: ");
@@ -35,6 +39,9 @@ var graduationYear
 var courseName
 var courseLevel
 var educationLevel
+
+var educationTitle = "Education Background";
+document.getElementById('education-details').innerHTML = educationTitle;
 
 const education = () =>{
   educationLevel = prompt("What is the highest education institution you attended (e.g University, College, Secondary School), Type Just One Please: ");
@@ -216,6 +223,9 @@ var skill2
 var skill3
 var skill4
 var skill5
+
+var professionalSkillsTitle = "Professional Skills";
+document.getElementById('professional-skills').innerHTML = professionalSkillsTitle;
 
 const Skills = () => {
 var numberOfSkills = prompt("How many professional skills do you have ? : ");
@@ -571,7 +581,8 @@ const certificates = () => {
    var div = document.getElementById("certificate4");
    div.appendChild(li);
 
- } else if (numberOfCerticates == 5) {
+ }
+ else if (numberOfCerticates == 5) {
    certificate1.name = prompt("What Is The Name Of Your First Certificate ? : ");
    certificate1.organization = prompt("What Is The Name Of The Organization Which Granted You With "+ certificate1.name +" Certificate ? : ");
    certificate1.year = prompt("In Which Year Where You Awarded by "+ certificate1.organization +" With " + certificate1.name + " Certificate ? : ");
@@ -1043,39 +1054,22 @@ function work() {
   }
 }
 work();
-//hobbies
 
+//hobbies
 const hobbies = () => {
-  let hobbie1 = prompt("What is your First hobby ? : ");
-  let hobbie2 = prompt("What is your Second hobby ? : ");
-  let hobbie3 = prompt("What is your Third hobby ? : ");
-  let hobbie4 = prompt("What is your Fourth hobby ? : ");
+  let hobby1 = prompt("What is your First hobby ? : ");
+  let hobby2 = prompt("What is your Second hobby ? : ");
+  let hobby3 = prompt("What is your Third hobby ? : ");
+  let hobby4 = prompt("What is your Fourth hobby ? : ");
 
 let hobbiesTitle = "Hobbies";
 document.getElementById('hobbiesTitle').innerHTML = hobbiesTitle;
-  var li = document.createElement("li");
-  var node = document.createTextNode(`${hobbie1.name}`);
-  li.appendChild(node);
-  var div = document.getElementById("hobbies");
-  div.appendChild(li);
-  var li = document.createElement("li");
-  var node = document.createTextNode(`${hobbie2.name}`);
-  li.appendChild(node);
-  var div = document.getElementById("hobbies");
-  div.appendChild(li);
-  var li = document.createElement("li");
-  var node = document.createTextNode(`${hobbie3.name}`);
-  li.appendChild(node);
-  var div = document.getElementById("hobbies");
-  div.appendChild(li);
-  var li = document.createElement("li");
-  var node = document.createTextNode(`${hobbie4.name}`);
-  li.appendChild(node);
-  var div = document.getElementById("hobbies");
-  div.appendChild(li);
+document.getElementById('hobby1').innerHTML = hobby1;
+document.getElementById('hobby2').innerHTML = hobby2;
+document.getElementById('hobby3').innerHTML = hobby3;
+document.getElementById('hobby4').innerHTML = hobby4;
 }
 hobbies();
-
 //Referees
 class Referee {
   constructor(name, email, phone, designation, workplace, address, city) {
